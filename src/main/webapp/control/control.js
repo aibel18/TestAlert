@@ -26,6 +26,7 @@ function conectar(){
        console.log("WebSocket NO SUPORT!");
     }
 }
+//message para enviar a server
 function sendMessage(val){
     if(coneccion.readyState!=1){
         alert("NO SE ENVIO MENSAJE, SIN CONEXION");
@@ -34,6 +35,7 @@ function sendMessage(val){
     //send
     coneccion.send(val);
 }
+//message enviado por el server
 function receivedMessage(evt){
     switch(Number(evt.data)){
 
@@ -41,6 +43,13 @@ function receivedMessage(evt){
         case 2:;return;
         case 3:alertVibratoria();return;
     }
+}
+
+function startTest(){    
+    sendMessage(-1);
+}
+function endTest(){
+    sendMessage(0);
 }
 
 function alertVibratoria(){

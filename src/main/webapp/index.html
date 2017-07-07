@@ -1,9 +1,138 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Alert</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body
-    </body>
+<head>
+	<link rel="stylesheet" type="text/css" href="control\css.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+	<div style="text-align:center">
+		 
+		<video id="video">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">	  
+		</video>
+		<video id="video1" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<video id="video2" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<br>
+		<video id="video3" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<video id="video4" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<video id="video5" width="390" onclick="questionario()">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<video id="video6" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">	  
+		</video>
+		<video id="video7" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<video id="video8" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<br>
+		<video id="video9" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<video id="video10" width="390">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+		<video id="video11" width="390" onclick="questionario()">
+			<source src="VIDEOS\tuelho.mov" type="video/mp4">
+		</video>
+
+		<div class="overlay">
+			<div style="display: none" id="test" class="alert alert-danger alert-dismissable fade in">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+			</div>
+		</div>
+	</div> 
+	<script> 
+		var myVideo = document.getElementById("video"); 
+		var myVideo1 = document.getElementById("video1"); 
+		var myVideo2 = document.getElementById("video2"); 
+		var myVideo3 = document.getElementById("video3");
+		var myVideo4 = document.getElementById("video4"); 
+		var myVideo5 = document.getElementById("video5");
+		var myVideo6 = document.getElementById("video6"); 
+		var myVideo7 = document.getElementById("video7"); 
+		var myVideo8 = document.getElementById("video8"); 
+		var myVideo9 = document.getElementById("video9");
+		var myVideo10 = document.getElementById("video10"); 
+		var myVideo11 = document.getElementById("video11"); 
+		
+		function teste() {
+			//$(".alert").alert('close');
+			var display = document.getElementById("test").style.display;
+                        if(display == "none")
+                            document.getElementById("test").style.display = 'block';
+                        else
+                            document.getElementById("test").style.display = 'none';
+		}
+
+		function playPause() { 
+			
+		    if (myVideo.paused) 
+		        myVideo.play(); 
+
+		    if (myVideo1.paused) 
+		        myVideo1.play(); 
+		   
+		    if (myVideo2.paused) 
+		        myVideo2.play(); 
+		   
+		    if (myVideo3.paused) 
+		        myVideo3.play();
+
+		    if (myVideo4.paused) 
+		        myVideo4.play(); 
+		   
+		    if (myVideo5.paused) 
+		        myVideo5.play();
+
+		    if (myVideo6.paused) 
+		        myVideo6.play(); 
+		   
+		    if (myVideo7.paused) 
+		        myVideo7.play(); 
+		   
+		    if (myVideo8.paused) 
+		        myVideo8.play(); 
+		   
+		    if (myVideo9.paused) 
+		        myVideo9.play();
+
+		    if (myVideo10.paused) 
+		        myVideo10.play(); 
+		   
+		    if (myVideo11.paused) 
+		        myVideo11.play();
+		   
+		} 
+
+		function makeBig() { 
+		    myVideo.width = 560; 
+		} 
+
+		function makeSmall() { 
+		    myVideo.width = 320; 
+		} 
+
+		function makeNormal() { 
+		    myVideo.width = 420; 
+		} 
+		
+
+		playPause();
+	</script>
+        <script src="video.js"></script>
+</body>
 </html>

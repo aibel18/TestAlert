@@ -58,7 +58,7 @@ public class ServerAlert {
         System.out.println( "Coneccion error");
     }
     //metodo para enviar a todos usuarios conectados
-    public static synchronized void enviarTodos(Object msg) {
+    public static void enviarTodos(Object msg) {
         try {
             for (Session s : usuarios) {
                 if (s.isOpen()) {
@@ -70,7 +70,7 @@ public class ServerAlert {
         }   
     }
     //metodo para enviar a todos menos yo
-    public static synchronized void enviarOtros(Session session,Object msg) {
+    public static void enviarOtros(Session session,Object msg) {
         try {
             for (Session s : usuarios) {
                 if (s.isOpen() && s.getId()!= session.getId() ) {
